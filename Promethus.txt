@@ -1,0 +1,23 @@
+pull prometheus image ::
+
+docker pull prom/prometheus
+
+run prometheus image ::
+
+docker run -p 9090:9090 -v  <your prometheus file path>/prometheus.yml prom/prometheus
+		
+URL to hit ::
+
+http://<your IP>:9090/
+	
+grafana image ::
+	
+docker pull grafana/grafana
+
+run grafana image ::
+		
+docker run -d --name=grafana -p 3000:3000 grafana/
+	
+URL to hit ::
+	
+http://<yourIP>:3000/
